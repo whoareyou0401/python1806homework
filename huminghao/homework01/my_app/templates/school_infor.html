@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息</title>
+</head>
+<body>
+    {% for i in schools %}
+        <li>学校名称:{{i.name}},学校地址{{i.address}}</li>
+    {% endfor %}
+
+</body>
+</html>
