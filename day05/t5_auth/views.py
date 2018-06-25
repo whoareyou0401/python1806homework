@@ -9,25 +9,6 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 
-# 系统自带的user
-# def register(req):
-#     if req.method =="GET":
-#         return render(req, "register.html")
-#     elif req.method == "POST":
-#         params = req.POST
-#         name = params.get("user_name")
-#         pwd = params.get("pwd")
-#         confirm_pwd = params.get("confirm_pwd")
-#         # 根据产品需求 账号密码校验
-#         if name and len(name) > 3 and  pwd and len(pwd) > 6 and pwd==confirm_pwd:
-#             # 保存用户，密码
-#             User.objects.create_user(username=name, password=pwd)
-#             return redirect(reverse("t5_auth:login"))
-#         else:
-#             return HttpResponse("账号或密码有误")
-#
-
-
 def register(req):
     if req.method == "GET":
         return render(req, "register.html")
