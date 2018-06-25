@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Grade(models.Model):
@@ -16,6 +17,8 @@ class Grade(models.Model):
         default=True,
         verbose_name="是否活跃"
     )
+
+
 class Student(models.Model):
     name = models.CharField(
         max_length=30,
