@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>班级列表</title>
+</head>
+<body>
+    {%for c in classes%}
+        <li><a href="/stu?c_id={{c.id}}" target="_blank">{{c.name}}</a></li>
+    {%endfor%}
+</body>
+</html>
