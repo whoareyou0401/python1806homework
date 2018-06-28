@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+        }
+        .jinjia{
+            /*text-decoration: line-through;*/
+            color: green;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    {%for i in items%}
+        <div >
+            <img src="{{i.icon}}" alt="">
+            <span>{{i.come}}</span>
+            <span>  </span>
+            <span class="shoujia">售价:{{i.price}}</span>
+            <span class="jinjia">进价:{{i.in_price}}</span>
+        </div>
+    {%endfor%}
+</body>
+</html>
