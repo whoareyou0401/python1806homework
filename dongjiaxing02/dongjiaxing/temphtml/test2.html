@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<body>
+    {%for s in stus%}
+        <li>姓名：{{s.name}}年龄：{{s.age}}成绩：{{s.score}}</li>
+    {%endfor%}
+</body>
+</html>
