@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<script>
+    function commit() {
+        $.ajax({
+            url:'/mydata',
+            data:{
+                id:5,
+                esrfmiddlewaretoken:$.cookie('csrftoken')
+            },
+            method:"delete",
+            success:function (data) {
+                alert(data)
+
+            }
+        })
+    }
+
+</script>
+<body>
+<h1>restful 请求方法模拟</h1>
+<form action="/mydata" method="post">
+    <input type="text" name="id">
+    {% csrf_token %}
+    <br>
+    <input type="submit"value="post">
+</form>
+<br/>
+<hr/>
+{#<form action="/mydata"method="delete">#}
+{#    <input type="text"name ="id">#}
+{#    <br/>#}
+{#    <button onclick="commit()">delete</button>#}
+{#</form>#}
+<button onclick="commit()">delete</button>
+</body>
+</html>
