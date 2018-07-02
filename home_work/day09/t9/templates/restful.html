@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function commit() {
+        $.ajax({
+            url:'/mydata'
+        })
+    }
+
+
+</script>
+<body>
+    <h1>restful 请求方法模拟</h1>
+    <form action="/mydata" method="post">
+        <input type="text"name="id">
+        {%%csrf_token%}
+        <br>
+
+
+    </form>
+</body>
+</html>
