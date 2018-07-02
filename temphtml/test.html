@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类</title>
+</head>
+<body>
+    <p>商品分类如下</p>
+    {%for cate in cates%}
+        <li><a href="/items?cate_id={{cate.id}}" target="_blank">{{cate.name}}</a></li>
+    {%endfor%}
+</body>
+</html>
