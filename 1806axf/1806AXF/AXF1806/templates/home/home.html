@@ -1,0 +1,44 @@
+{%extends 'base/base_main.html'%}
+{%load static%}
+{%block MyCSS%}
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'axf/home/css/home.css' %}">
+{%endblock%}
+
+{%block content%}
+    <div id="home">
+        <div class="swiper-container" id="topSwiper">
+            <div class="swiper-wrapper">
+                {%for swiper in swipers%}
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="{{swiper.img}}" alt="">
+                        </a>
+                    </div>
+                {%endfor%}
+
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+
+        </div>
+    </div>
+{%endblock%}
+
+{%block MyJS%}
+{{bolck.super}}
+<script type="text/javascript" src="{%static 'axf/home/js/home.js'%}"></script>
+{%endblock%}
+
+
+
+
+
+
+
