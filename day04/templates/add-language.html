@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加语言</title>
+</head>
+<body>
+   <from action="/akai/apis/v1/add-language" mothod="post"> </from>
+        {%csrf_token%}
+    语言名字：<input type="text" name="name" >
+    语言描述：<input type="text" name=" desc">
+    <input type="submit" value=" 上传">
+</body>
+</html>

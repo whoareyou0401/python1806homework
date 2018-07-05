@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%for i in langs%}
+        <!--<li>{{i.name}}</li>-->
+        {% ifequal i.name "python"%}
+            <li style=" color: #1e8b51">{{forloop.counter}}: {{i.name}}</li>
+            {%else%}
+            <li>{{forloop.counter}}: {{i.name}}</li>
+        {%endifequal%}
+        {%empty}
+            <p>没了</p>
+    {%endfor%}
+    <hr>
+    <p>我喜欢的语言是{{langs.0.name}},理由是：{{langs.0.desc}}</p>
+    <p>我喜欢的语言是{{langs.1.name}},理由是：{{langs.1.get_desc}}</p>
+
+</body>
+</html>

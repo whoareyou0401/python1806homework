@@ -15,12 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-# from t3 import apis_v1_urls
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r"^t3/", include("t3.urls"))
+    url(r'^akaizi/', include("akaizi.urls"))
+
+    # 跟下面url(r'^akaizi/apis/v1/', include("akaizi.apis_vi_urls"))作用一样。
+    # url(r'^api/v1/',include("akaizi.apis_vi_urls"))
+
 ]
-urlpatterns += [
-    url(r"^t3/apis/v1/", include("t3.apis_v1_urls"))
-]
+
+
+urlpatterns += {
+    url(r'^akaizi/apis/v1/', include("akaizi.apis_vi_urls"))
+}
