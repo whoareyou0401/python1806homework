@@ -1,0 +1,154 @@
+{%extends 'base/base_main.html'%}
+{%load static%}
+
+{%block MyCSS%}
+{{ block.super }}
+    <link rel="stylesheet" href="{%static  'axf/mine/css/mine.css'%}">
+{%endblock%}
+
+{%block content%}
+    <div id="mine">
+        <!--我的顶部信息-->
+        <div class="fixed">
+            <span class="glyphicon glyphicon-user"></span>
+            <p class="not_login">未登录</p>
+
+            <p class="level">
+                <span class="glyphicon glyphicon-fire"></span>
+                <span >等级</span>
+            </p>
+            <p class="collect">
+                <span class="glyphicon glyphicon-heart-empty"></span>
+                <span>收藏</span>
+            </p>
+
+        </div>
+        <div id="regis">
+            <a href="{%url 'axf:register'%}">注册</a>
+        </div>
+
+        <!--订单信息-->
+        <div class="mine_info">
+            <p>
+                我的订单
+                <a href="#">查看全部订单></a>
+            </p>
+
+            <div id="nav">
+                 <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-yen" >
+
+                                </span>
+                            </dt>
+                            <dd>待付款</dd>
+                        </dl>
+                    </li>
+
+                     <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-envelope">
+
+                                </span>
+                            </dt>
+                            <dd>待收货</dd>
+                        </dl>
+                    </li>
+
+                     <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-pencil">
+
+                                </span>
+                            </dt>
+                            <dd>待评价</dd>
+                        </dl>
+                    </li>
+
+                     <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-transfer">
+
+                                </span>
+                            </dt>
+                            <dd>退款/收货</dd>
+                        </dl>
+                    </li>
+
+                </ul>
+            </div>
+
+            <menu>
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-tree-conifer"></span>
+                            </dt>
+                            <dd>积分商城</dd>
+                        </dl>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-tree-conifer"></span>
+                            </dt>
+                            <dd>优惠券</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-tree-conifer"></span>
+                            </dt>
+                            <dd>收货地址</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-tree-conifer"></span>
+                            </dt>
+                            <dd>客服反馈</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <span class="glyphicon glyphicon-tree-conifer"></span>
+                            </dt>
+                            <dd>关于我们</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </menu>
+
+            <p>
+                <a href="#">退出登录</a>
+            </p>
+
+        </div>
+
+
+    </div>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
