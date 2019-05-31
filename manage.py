@@ -3,7 +3,11 @@ import os
 import sys
 
 if __name__ == "__main__":
+<<<<<<< HEAD
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "day05.settings")
+=======
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "day02.settings")
+>>>>>>> 16126187819e2f3d9dbd7666a85bab74313d670a
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
